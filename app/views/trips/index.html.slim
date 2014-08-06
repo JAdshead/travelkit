@@ -1,5 +1,11 @@
 h1 Your trip
 
 ul
-  = @products.each do |p|
+  - @products.each do |p|
     li= p.name
+
+ul
+  - @category_list.each do |c_l|
+    li
+      =c_l
+      

@@ -5,4 +5,8 @@ class Product < ActiveRecord::Base
   has_many :locations
   has_many :trips
 
+  def self.get_kit(trip)
+    @products = Product.all
+  end
+
 end

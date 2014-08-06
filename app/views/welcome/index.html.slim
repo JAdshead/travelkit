@@ -1,20 +1,28 @@
 
-h1 Welcome to the travel luggage app....
+.intro.blue-bg
+  .half.yellow-bg
+    h2 Get your
+  h1.logo Sorted.
 
 = form_for @trip do |f|
-  = f.text_field :destination, placeholder: "Enter Destination", required: true
-  br
-  =<> f.label :arrival, "Date of arrival"
-  = date_select :trip, :arrive
-  br
-  =<> f.label :duration, "Trip Duration"
-  =<> f.number_field :duration
-  |days
-  br
-  =<> f.label :budget
-  =<> f.number_field :budget
-  br
-  =<> f.label :gender
-  =<> f.text_field :gender
-  br
-  = f.submit
+  p.yellow-bg.wrapper
+    =<> f.label :destination, "I am going to..."
+    br
+    = f.text_field :destination, placeholder: "Country or City", required: true
+  p.blue-bg.wrapper
+    =<> f.label :group, "Together with"
+    = f.number_field :group
+    | other person(s)
+  p.yellow-bg.wrapper
+    =<> f.label :arrival, "Date of arrival"
+    = date_select :trip, :arrive
+  p.blue-bg.wrapper
+    =<> f.label :duration, "Trip Duration"
+    =<> f.number_field :duration
+    |days
+  p.yellow-bg.wrapper
+    =<> f.label :budget
+    =<> f.number_field :budget
+  p.blue-bg.wrapper
+    = f.submit
+

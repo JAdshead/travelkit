@@ -11,7 +11,17 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20140806141002) do
+ActiveRecord::Schema.define(:version => 20140806154209) do
+
+  create_table "categories", :force => true do |t|
+    t.string "name"
+  end
+
+  create_table "locations", :force => true do |t|
+    t.string   "name"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
 
   create_table "models", :force => true do |t|
     t.string   "email",                  :default => "", :null => false
@@ -26,9 +36,33 @@ ActiveRecord::Schema.define(:version => 20140806141002) do
     t.string   "last_sign_in_ip"
     t.datetime "created_at",                             :null => false
     t.datetime "updated_at",                             :null => false
+    t.string   "name"
+    t.integer  "age"
+    t.string   "sex"
+    t.integer  "phone"
   end
 
   add_index "models", ["email"], :name => "index_models_on_email", :unique => true
   add_index "models", ["reset_password_token"], :name => "index_models_on_reset_password_token", :unique => true
+
+  create_table "products", :force => true do |t|
+    t.string   "name"
+    t.text     "description"
+    t.string   "image"
+    t.integer  "category_id"
+    t.datetime "created_at",  :null => false
+    t.datetime "updated_at",  :null => false
+  end
+
+  create_table "trips", :force => true do |t|
+    t.string   "destination"
+    t.date     "arrive"
+    t.integer  "duration"
+    t.integer  "group"
+    t.integer  "budget"
+    t.integer  "model_id"
+    t.datetime "created_at",  :null => false
+    t.datetime "updated_at",  :null => false
+  end
 
 end

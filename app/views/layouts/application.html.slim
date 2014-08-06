@@ -10,10 +10,10 @@ html
       =content_tag :div, msg, :id => "flash_#{name}"
     .user-nav
       - if model_signed_in?
-        p Logged in as #{current_user.email}
-        = link_to 'Edit Profile', edit_model_registration_path
-        |
-        = link_to "Logout", destroy_model_session_path, method: :delete
+        p Hi #{current_model.name}
+        =<> link_to 'Edit Profile', edit_model_registration_path
+        ||
+        =<> link_to "Logout", destroy_model_session_path, method: :delete
       - else 
         = link_to 'Sign up', new_model_registration_path
         |

@@ -1,5 +1,25 @@
 
 h1 Welcome to the travel luggage app....
 
+= form_for @trip do |f|
+  = f.text_field :destination, placeholder: "Enter Destination", required: true
+  br
+  =<> f.label :group, "Group Size"
+  = f.number_field :group
+  br
+  =<> f.label :arrival, "Date of arrival"
+  = date_select :trip, :arrive
+  br
+  =<> f.label :duration, "Trip Duration"
+  =<> f.number_field :duration
+  |days
+  br
+  =<> f.label :budget
+  =<> f.number_field :budget
+  br
+  = f.submit
 
-h2 Get travel kit
+ul
+  = @trips.each do |trip|
+    li
+      =trip.destination

@@ -1,7 +1,9 @@
 class TripsController < ApplicationController
 
-  load_and_authorize_resource
 
+  def create
 
-
+    @trip = Trip.create(params[:trip])
+    redirect_to root_path
+  end
 end

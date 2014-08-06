@@ -10,6 +10,7 @@ gem "slim-rails"
 gem 'devise'
 gem 'carrierwave'
 gem 'fog'
+gem 'rmagick'
 
 
 # Gems used only for assets and not required

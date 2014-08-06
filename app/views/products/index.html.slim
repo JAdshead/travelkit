@@ -1,0 +1,12 @@
+h1  Product list
+
+ul
+  - @products.each do |product|
+    hr
+    = product.name
+    = form_for product do |f|
+      = f.label :image
+      = f.file_field :image
+      = f.submit
+
+

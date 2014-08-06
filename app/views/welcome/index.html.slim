@@ -4,9 +4,6 @@ h1 Welcome to the travel luggage app....
 = form_for @trip do |f|
   = f.text_field :destination, placeholder: "Enter Destination", required: true
   br
-  =<> f.label :group, "Group Size"
-  = f.number_field :group
-  br
   =<> f.label :arrival, "Date of arrival"
   = date_select :trip, :arrive
   br
@@ -16,5 +13,8 @@ h1 Welcome to the travel luggage app....
   br
   =<> f.label :budget
   =<> f.number_field :budget
+  br
+  =<> f.label :gender
+  =<> f.text_field :gender
   br
   = f.submit

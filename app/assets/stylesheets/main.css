@@ -11,11 +11,8 @@
    ========================================================================== */
 
 html,
-button,
-input,
-select,
-textarea {
-    color: #222;
+ {
+    color: #fff;
 }
 
 
@@ -105,20 +102,29 @@ textarea {
 
 /* Branding */
 
-body {font-family: 'walsheim', sans-serif;}
+body {
+  font-family: 'walsheim', sans-serif;
+  color: #666;
+}
 
 .blue-bg {background-color: #003782; color: white;}
 .yellow-bg {background-color: #ffc300;}
 
-.logo {color: #fff; text-align: center;
-    font-size: 3em;
-   /* position: relative;
-    bottom: 1.5em;*/
+.logo {
+  color: #ddd; 
+  color: #003782;
+  text-align: center;
+  font-size: 3em;
+  line-height: 1em;
 }
 
 .intro {
   height: 100vh;
+  text-align: center;
+  padding-top: 4em;
 }
+
+
 
 .intro .half {
   height: 50%;
@@ -149,31 +155,111 @@ body {font-family: 'walsheim', sans-serif;}
 /* Typography */
 
 body {
-  font-size: 30px;
+  font-size: 36px;
   line-height: 1.25em;
+}
+
+h2 {
+  color: #003782;
+  margin: 0;
 }
 
 /* UI basics */
 
-button, input {
+button,
+input,
+select,
+textarea {
     border: 0;
     outline: 0;
     background-color: #fff;
     text-align: center;
-    height: 50px;
+    height: 2em;
     padding: 10px 20px;
+    color: #ccc;
 }
 
 input {
-    text-align: left;
+    text-align: center;
     width: 100%;
-    color: #ddd;
+    color: #003782;
 }
 
-form p {
-  height: 50vh;
-  padding-top: 2em;
+input[type='number'] {
+  width: 50%;
+  font-size: 2em;
 }
+
+
+form p {
+  height: 100vh;
+  padding-top: 2em;
+  text-align: center;
+  color: #fff;
+  position: relative;
+}
+
+
+
+.main-form p {
+  background: #003782;
+}
+
+.main-form p label {
+  display: block;
+/*  width: 100%;
+  text-align: center;*/
+  padding-bottom: 2em;
+  font-weight: bolder;
+  color: white;
+}
+
+.main-form p.half {
+  height: 50vh;
+}
+
+.main-form p:nth-child(odd) {
+/*  border-left: 10px solid #ffc300;
+  border-right: 10px solid #ffc300;*/
+  background-color: #ffc300;
+  color: white;
+}
+
+.main-form p:nth-child(odd) label {
+  color: #fff;
+}
+
+.main-form p:nth-child(odd) input {
+  color: #ffc300;
+  border: 2px solid #ffc300;
+}
+
+
+#trip_duration {
+  width: 5em;
+  display: inline-block;
+}
+
+
+
+/* Navigation */
+
+.user-nav {
+
+}
+
+.user-nav a{
+  display: inline-block;
+  background: #003782;
+  color: #fff;
+  padding: 0.5em 1em;
+  font-size: 0.5em;
+  text-decoration: none;
+}
+
+.user-nav a:nth-child(odd){
+  background: #ffc300;
+  }
 
 
 /* UI specific */
@@ -185,6 +271,16 @@ form p {
 
 .purchase, .purchase > * {
         height: 50px;
+}
+
+.next {
+  position: absolute; 
+  bottom: 10px;
+  left: 0;
+  color: white;
+  width: 100%;
+  text-align: center;
+  display: none;
 }
 
 

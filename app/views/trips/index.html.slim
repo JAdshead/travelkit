@@ -1,4 +1,5 @@
-h1 Your trip
+h1.logo Your travel kit.
+h1.logo Sorted.
 
 ul
   - @categories.each do |c_l|
@@ -8,4 +9,10 @@ ul
       - if c_l.products.last
         = c_l.products.last.name
 
-      
+
+.purchase.S-1-1.float-container'>
+  .price.S-1-2.yellow-bg
+    | £23
+  
+  button.buy.S-1-2.blue-bg'>
+    | get kit

@@ -1,11 +1,18 @@
-h1 Your trip
+h1.logo Your travel kit.
+h1.logo Sorted.
 
 ul
-  - @products.each do |p|
-    li= p.name
-
-ul
-  - @category_list.each do |c_l|
+  - @categories.each do |c_l|
     li
-      =c_l
-      
+      =c_l.name
+      ul
+      - if c_l.products.last
+        = c_l.products.last.name
+
+
+.purchase.S-1-1.float-container'>
+  .price.S-1-2.yellow-bg
+    | £23
+  
+  button.buy.S-1-2.blue-bg'>
+    | get kit

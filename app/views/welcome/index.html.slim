@@ -1,49 +1,35 @@
 
-.intro.blue-bg
-  .half.yellow-bg
-    h2 Travel stresses?
-  h1.logo Sorted.
+.intro
+  h2 Travel stresses?
+  button.logo Sorted.
 
-= form_for @trip do |f|
-  p.wrapper
-    =<> f.label :destination, "I am going to..."
-    = f.text_field :destination, placeholder: "Country or City", required: true
-  p.wrapper
-    =<> f.label :group, "Together with"
-    = f.number_field :group
-    br
-    | other person(s)
-  p.wrapper
-    =<> f.label :arrival, "Arriving the..."
-    = date_select :trip, :arrive
-  p.wrapper
-    =<> f.label :duration, "Staying for..."
-    =<> f.number_field :duration
-    |days
-  p.wrapper
-    =<> f.label :budget
-    =<> f.number_field :budget
-  p.wrapper
-    = f.submit
+.main-form
+  = form_for @trip do |f|
+    p.wrapper
+      =<> f.label :destination, "I am going to..."
+      = f.text_field :destination, placeholder: "Country or City", required: true
+      a.next next
+    p.wrapper
+      =<> f.label :group, "Together with"
+      = f.number_field :group
+      br
+      | other person(s)
+      a.next next
+    p.wrapper
+      =<> f.label :arrival, "Arriving the..."
+      = date_select :trip, :arrive
+      a.next next
+    p.wrapper
+      =<> f.label :duration, "Staying for..."
+      =<> f.number_field :duration
+      br
+      |days
+      a.next next
+    p.wrapper
+      =<> f.label :budget
+      =<> f.number_field :budget
+      a.next next
+    p.wrapper
+      = f.submit
 
 
-/ = form_for @trip do |f|
-/   p.yellow-bg.wrapper
-/     =<> f.label :destination, "I am going to..."
-/     = f.text_field :destination, placeholder: "Country or City", required: true
-/   p.blue-bg.wrapper
-/     =<> f.label :group, "Together with"
-/     = f.number_field :group
-/     | other person(s)
-/   p.yellow-bg.wrapper
-/     =<> f.label :arrival, "Arriving the..."
-/     = date_select :trip, :arrive
-/   p.blue-bg.wrapper
-/     =<> f.label :duration, "Staying for..."
-/     =<> f.number_field :duration
-/     |days
-/   p.yellow-bg.wrapper
-/     =<> f.label :budget
-/     =<> f.number_field :budget
-/   p.blue-bg.wrapper
-/     = f.submit

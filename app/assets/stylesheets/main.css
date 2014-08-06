@@ -11,11 +11,8 @@
    ========================================================================== */
 
 html,
-button,
-input,
-select,
-textarea {
-    color: #222;
+ {
+    color: #fff;
 }
 
 
@@ -118,6 +115,7 @@ body {font-family: 'walsheim', sans-serif;}
 
 .intro {
   height: 100vh;
+  text-align: center;
 }
 
 .intro .half {
@@ -155,24 +153,77 @@ body {
 
 /* UI basics */
 
-button, input {
+button,
+input,
+select,
+textarea {
     border: 0;
     outline: 0;
     background-color: #fff;
     text-align: center;
-    height: 50px;
+    height: 2em;
     padding: 10px 20px;
+    color: #ccc;
 }
 
 input {
-    text-align: left;
+    text-align: center;
     width: 100%;
-    color: #ddd;
+    color: #003782;
+}
+
+input[type='number'] {
+  width: 50%;
+  font-size: 2em;
 }
 
 form p {
-  height: 50vh;
+  height: 100vh;
   padding-top: 2em;
+  text-align: center;
+  /*color: #003782;*/
+ /* border-left: 10px solid #003782;
+  border-right: 10px solid #003782;*/
+  background: #003782;
+}
+
+form p input {
+  /*border: 2px solid #003782;
+*/}
+
+form p label {
+  display: block;
+/*  width: 100%;
+  text-align: center;*/
+  padding-bottom: 2em;
+  font-weight: bolder;
+  color: white;
+}
+
+form p.half {
+  height: 50vh;
+}
+
+form p:nth-child(odd) {
+/*  border-left: 10px solid #ffc300;
+  border-right: 10px solid #ffc300;*/
+  background-color: #ffc300;
+  color: white;
+}
+
+form p:nth-child(odd) label {
+  color: #fff;
+}
+
+form p:nth-child(odd) input {
+  color: #ffc300;
+  border: 2px solid #ffc300;
+}
+
+
+#trip_duration {
+  width: 5em;
+  display: inline-block;
 }
 
 

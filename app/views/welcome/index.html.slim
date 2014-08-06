@@ -1,27 +1,49 @@
 
 .intro.blue-bg
   .half.yellow-bg
-    h2 Get your
+    h2 Travel stresses?
   h1.logo Sorted.
 
 = form_for @trip do |f|
-  p.yellow-bg.wrapper
+  p.wrapper
     =<> f.label :destination, "I am going to..."
-    br
     = f.text_field :destination, placeholder: "Country or City", required: true
-  p.blue-bg.wrapper
+  p.wrapper
     =<> f.label :group, "Together with"
     = f.number_field :group
+    br
     | other person(s)
-  p.yellow-bg.wrapper
-    =<> f.label :arrival, "Date of arrival"
+  p.wrapper
+    =<> f.label :arrival, "Arriving the..."
     = date_select :trip, :arrive
-  p.blue-bg.wrapper
-    =<> f.label :duration, "Trip Duration"
+  p.wrapper
+    =<> f.label :duration, "Staying for..."
     =<> f.number_field :duration
     |days
-  p.yellow-bg.wrapper
+  p.wrapper
     =<> f.label :budget
     =<> f.number_field :budget
-  p.blue-bg.wrapper
+  p.wrapper
     = f.submit
+
+
+/ = form_for @trip do |f|
+/   p.yellow-bg.wrapper
+/     =<> f.label :destination, "I am going to..."
+/     = f.text_field :destination, placeholder: "Country or City", required: true
+/   p.blue-bg.wrapper
+/     =<> f.label :group, "Together with"
+/     = f.number_field :group
+/     | other person(s)
+/   p.yellow-bg.wrapper
+/     =<> f.label :arrival, "Arriving the..."
+/     = date_select :trip, :arrive
+/   p.blue-bg.wrapper
+/     =<> f.label :duration, "Staying for..."
+/     =<> f.number_field :duration
+/     |days
+/   p.yellow-bg.wrapper
+/     =<> f.label :budget
+/     =<> f.number_field :budget
+/   p.blue-bg.wrapper
+/     = f.submit

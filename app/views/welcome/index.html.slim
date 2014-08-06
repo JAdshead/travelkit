@@ -11,13 +11,15 @@
       a.next next
     p.wrapper
       =<> f.label :gender, "I am "
-      =<> f.select(:gender, options_for_select(['Female', 'Male']))
-    p.wrapper
-      =<> f.label :group, "Together with"
-      = f.number_field :group
-      br
-      | other person(s)
-      a.next next
+      - ['Female', 'Male', 'Who cares?'].each do |option|
+        =<> f.radio_button :gender, option
+        = option
+    / p.wrapper
+    /   =<> f.label :group, "Together with"
+    /   = f.number_field :group
+    /   br
+    /   | other person(s)
+    /   a.next next
     p.wrapper
       =<> f.label :arrival, "Arriving the..."
       = date_select :trip, :arrive
@@ -30,7 +32,9 @@
       a.next next
     p.wrapper
       =<> f.label :budget
-      =<> f.number_field :budget
+      - ['Cheap', 'Luxury'].each_with_index do |option, i|
+        =<> f.radio_button :budget, i
+        =option
       a.next next
     p.wrapper
       = f.submit

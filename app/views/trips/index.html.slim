@@ -1,11 +1,11 @@
 h1 Your trip
 
 ul
-  - @products.each do |p|
-    li= p.name
-
-ul
-  - @category_list.each do |c_l|
+  - @categories.each do |c_l|
     li
-      =c_l
+      =c_l.name
+      ul
+      - if c_l.products.last
+        = c_l.products.last.name
+
       

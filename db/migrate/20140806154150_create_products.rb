@@ -6,6 +6,7 @@ class CreateProducts < ActiveRecord::Migration
       t.string :image
 
       t.belongs_to :category
+      t.belongs_to :location
       t.timestamps
     end
   end

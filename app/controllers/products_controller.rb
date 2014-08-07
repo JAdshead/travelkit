@@ -6,7 +6,9 @@ class ProductsController < ApplicationController
 
   def update
     @product = Product.find(params[:id])
-    @product.update_attributes(params[:product][:images])
+    # image = params[:product][:image]
+    # @product[:image] = image_uploader.store!(image)
+    @product.save
     redirect_to root_path
   end
 

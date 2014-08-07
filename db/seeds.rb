@@ -15,54 +15,54 @@ england = Location.create(name: "GB")
 
 c1 = Category.create(name: "Shampoo")
 
-p = Product.create(price: 2,name: "AXE Shampoo Apollo", gender: "Male")
+p = Product.create(price: 2,name: "AXE Shampoo Apollo", gender: "Male", image: "http://i.walmartimages.com/i/p/00/07/94/00/32/0007940032442_500X500.jpg")
 p.location = france
 p.category = c1
 p.save
 
-p2 = Product.create(price: 13,name: "TIMOTEI Shampoo Pure", gender: "Male")
+p2 = Product.create(price: 13,name: "TIMOTEI Shampoo Pure", gender: "Male", image: "http://www.unilever.fr/Images/Timotei-Shampooin-Pure-450x450_tcm226-360711.jpg") 
 p2.location = france
 p2.category = c1
 p2.save
-p3 = Product.create(price: 1,name: "AXE Shampoo Just Clean", gender: "Male")
+p3 = Product.create(price: 1,name: "AXE Shampoo Just Clean", gender: "Male", image: "http://i.walmartimages.com/i/p/00/07/94/00/06/0007940006712_500X500.jpg")
 p3.location = france
 p3.category = c1
 p3.save
-p4 = Product.create(price: 4,name: "DOVE Shampoo Hair Therapy Oil Nutrition", gender: "Female")
+p4 = Product.create(price: 4,name: "DOVE Shampoo Hair Therapy Oil Nutrition", gender: "Female", image: "http://static.snapittoday.com/items/big/3bk7c76o59eo0eh.jpg")
 p4.location = france
 p4.category = c1
 p4.save
-p5 = Product.create(price: 4,name: "SUNSILK Shampooing Perfect Smoothing", gender: "Female")
+p5 = Product.create(price: 4,name: "SUNSILK Shampooing Perfect Smoothing", gender: "Female", image: "http://i2.wp.com/beautywidbrainz.com/wp-content/uploads/2013/03/Sunsilk.jpg?resize=600%2C651")
 p5.location = france
 p5.category = c1
 p5.save
-p6 = Product.create(price: 12,name: "TONI & GUY Dry Shampoo", gender: "Female")
+p6 = Product.create(price: 12,name: "TONI & GUY Dry Shampoo", gender: "Female", image:"http://www.moodiereport.com/images/Toni&guy_dry_shampoo.jpg")
 p6.location = france
 p6.category = c1
 p6.save
 
 
-p7 = Product.create(price: 3,name: "LYNX Shampoo Apollo", gender: "Male")
+p7 = Product.create(price: 3,name: "LYNX Shampoo Apollo", gender: "Male", image: "http://goalsandgear.files.wordpress.com/2013/01/lynx-apollo-shampoo-conditioner.jpg")
 p7.location = england
 p7.category = c1
 p7.save
-p8 = Product.create(price: 4,name: "LYNX Dual Shampoo 2in1", gender: "Male")
+p8 = Product.create(price: 4,name: "LYNX Dual Shampoo 2in1", gender: "Male", image: "http://images-its.chemistdirect.co.uk/Lynx-2-in-1-Shampoo-182104.jpg?o=CtO1HCZB6@4nTnM2P7gegx4xQVcj&V=V06i&q=75")
 p8.location = england
 p8.category = c1
 p8.save
-p9 = Product.create(price: 6,name: "RADOX Men Mint + Tea Tree", gender: "Male")
+p9 = Product.create(price: 6,name: "RADOX Men Mint + Tea Tree", gender: "Male", image: "http://www.pharmacy2u.co.uk/Uploads/Products/693be47f-8eba-4549-8324-d35f2d95852a/radox-mint-tea-tree.jpg")
 p9.location = england
 p9.category = c1
 p9.save
-p10 = Product.create(price: 7,name: "TIMOTEI Pure Dry Shampoo", gender: "Female")
+p10 = Product.create(price: 7,name: "TIMOTEI Pure Dry Shampoo", gender: "Female", image: "http://1.bp.blogspot.com/-BOavZshN5j8/UEnjSBO5KSI/AAAAAAAAa3k/f5089niqNb0/s1600/Timotei+Pure+Dry+Shampoo+Review+003.jpg")
 p10.location = england
 p10.category = c1
 p10.save
-p11 = Product.create(price: 8,name: "DOVE Damage Therapy Daily Care Shampoo", gender: "Female")
+p11 = Product.create(price: 8,name: "DOVE Damage Therapy Daily Care Shampoo", gender: "Female", image: "http://payatdoor.com/Uploads/Dove%20Damage%20Therapy%20Daily%20Shine%20Shampoo%20%2080%20ml.jpg")
 p11.location = england
 p11.category = c1
 p11.save
-p12 = Product.create(price: 9,name: "TRESemme Colour Fade Protection Shampoo", gender: "Female")
+p12 = Product.create(price: 9,name: "TRESemme Colour Fade Protection Shampoo", gender: "Female", image: "http://www.unilever.co.uk/Images/450-tresemme-colour-fade-protection-shampoo-r_tcm28-301869.jpg")
 p12.location = england
 p12.category = c1
 p12.save
@@ -117,11 +117,11 @@ p22.save
 
 
 c3 = Category.create(name: "Conditioner")
-p23 = Product.create(price: 3,name: "DOVE Hair Care Therapy Conditioner Smooth & Silky", gender: "Female")
+p23 = Product.create(price: 3,name: "DOVE Hair Care Therapy Conditioner Smooth & Silky", gender: "Female", image: "http://heart-2-heart-online.com/wp-content/uploads/2012/01/dove-hair-care-2.jpg")
 p23.location = france
 p23.category = c3
 p23.save
-p24 = Product.create(price: 4,name: "TONI & GUY Conditioner Care for Damaged Hair", gender: "Female")
+p24 = Product.create(price: 4,name: "TONI & GUY Conditioner Care for Damaged Hair", gender: "Female", image: "http://heart-2-heart-online.com/wp-content/uploads/2012/01/dove-hair-care-2.jpg")
 p24.location = france
 p24.category = c3
 p24.save
@@ -131,7 +131,7 @@ p25 = Product.create(price: 3,name: "TIMOTEI Pure Conditional", gender: "Female"
 p25.location = england
 p25.category = c3
 p25.save
-p26 = Product.create(price: 4,name: "DOVE Demage Therapy Intensive Repair", gender: "Female")
+p26 = Product.create(price: 4,name: "DOVE Demage Therapy Intensive Repair", gender: "Female", image: "http://heart-2-heart-online.com/wp-content/uploads/2012/01/dove-hair-care-2.jpg")
 p26.location = england
 p26.category = c3
 p26.save
@@ -164,7 +164,7 @@ p32 = Product.create(price: 2,name: "DOVE Men+Care Clean Comfort Body Wash", gen
 p32.location = england
 p32.category = c4
 p32.save
-p32 = Product.create(price: 3,name: "DOVE Deeply Nourishing Body Wash", gender: "Female")
+p32 = Product.create(price: 3,name: "DOVE Deeply Nourishing Body Wash", gender: "Female", image: "http://heart-2-heart-online.com/wp-content/uploads/2012/01/dove-hair-care-2.jpg")
 p32.location = england
 p32.category = c4
 p32.save
@@ -228,7 +228,7 @@ p45.location = france
 p45.category = c6
 p45.save
 
-p46 = Product.create(price: 1,name: "LYNX Dry Africa Aerosol Anti-Perspirant Deodorant", gender: "Male")
+p46 = Product.create(price: 1,name: "LYNX Dry Africa Aerosol Anti-Perspirant Deodorant", gender: "Male", image: "http://heart-2-heart-online.com/wp-content/uploads/2012/01/dove-hair-care-2.jpg")
 p46.location = england
 p46.category = c6
 p46.save

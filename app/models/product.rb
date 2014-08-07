@@ -1,7 +1,6 @@
  class Product < ActiveRecord::Base
   attr_accessible :name, :image, :gender, :price
-  mount_uploader :image, ImageUploader
-  
+
   belongs_to :category
   belongs_to :location
 

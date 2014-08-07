@@ -8,7 +8,10 @@
 
     ul
       li
-        =image_tag src=@product.image
+        - if @product.image
+          =image_tag src=@product.image
+        - else
+          =image_tag src="Unilever.png"
         h1.small.product-name
           =@product.name
     = will_paginate instance_variable_get("@"+@product.category.name.gsub(" ","_").downcase), param_name: "trip_page",:page_links => false, previous_label: "PREVIOUS", next_label: "NEXT"

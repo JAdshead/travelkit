@@ -15,13 +15,17 @@ html,
     color: #fff;
 }
 
-html, body {
-  min-height: 100vh;
+img {
+  max-width: 50%;
 }
 
-form {
-  margin-bottom: 1em;
+html, body {
+  min-height: 100%;
 }
+
+/*form {
+  margin-bottom: 1em;
+}*/
 
 a {
   color: white;
@@ -223,7 +227,7 @@ input[type='number'] {
 
 
 form p {
-  /*height: 100vh;*/
+  height: 100vh;
   padding-top: 2em;
   text-align: center;
   color: #fff;

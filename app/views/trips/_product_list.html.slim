@@ -1,0 +1,15 @@
+- if @product
+  li.item
+    .cat-name.small
+      =@product.category.name
+    ul
+      li
+        =image_tag src=@product.image
+        =@product.name
+- else
+  li.item
+    .cat-name.small
+      =@product.category.name
+    ul
+      li.small Sorry no products in this category
+= will_paginate instance_variable_get("@"+@product.category.name.gsub(" ","_").downcase), param_name: "trip_page",:page_links => false, previous_label: "PREVIOUS", next_label: "NEXT"

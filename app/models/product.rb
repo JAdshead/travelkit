@@ -5,7 +5,6 @@
   belongs_to :category
   belongs_to :location
 
-
   def self.get_kit(trip, categories, country_short)
     destination = country_short
 

@@ -15,6 +15,18 @@ html,
     color: #fff;
 }
 
+html, body {
+  min-height: 100vh;
+}
+
+form {
+  margin-bottom: 1em;
+}
+
+a {
+  color: white;
+  text-decoration: none;
+}
 
 
 html {
@@ -211,12 +223,14 @@ input[type='number'] {
 
 
 form p {
-  height: 100vh;
+  /*height: 100vh;*/
   padding-top: 2em;
   text-align: center;
   color: #fff;
   position: relative;
 }
+
+
 
 form p select {
   color: #1C2654;

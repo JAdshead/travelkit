@@ -1,16 +1,19 @@
-h1.logo Your travel kit.
-h1.logo Sorted.
+.intro
+  h2 Your travel kit.
+  h1.logo Sorted.
 
-ul
+
+ul.kit
   - @products_list.each do |category|
-    li=category[0]
-    ul
-      li=category[1].first.name
-
-
+    li.item
+      .cat-name.small
+        =category[0]
+      ul
+        li=category[1].first.name
 
 .purchase.S-1-1.float-container'>
   .price.S-1-2.yellow-bg
+    span.small Total
     | £23
   
   button.buy.S-1-2.blue-bg'>

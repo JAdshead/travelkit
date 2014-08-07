@@ -5,11 +5,18 @@
 
 ul.kit
   - @products_list.each do |category|
-    li.item
-      .cat-name.small
-        =category[0]
-      ul
-        li=category[1].first.name
+    - if category[1] == []
+      li.item
+        .cat-name.small
+          =category[0]
+        ul
+          li.small Sorry no products in this category
+    - if category[1] != []
+      li.item
+        .cat-name.small
+          =category[0]
+        ul
+          li=category[1].first.name
 
 .purchase.S-1-1.float-container'>
   .price.S-1-2.yellow-bg

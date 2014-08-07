@@ -130,9 +130,9 @@ body {
   padding-top: 4em;
 }
 
-
-.intro .half {
-  height: 50%;
+.intro.short {
+  height: auto;
+  padding-bottom: 4em;
 }
 
 /* Grid */
@@ -220,8 +220,6 @@ form p select {
   color: #1C2654;
 }
 
-
-
 .main-form p {
   background: #1C2654;
 }
@@ -266,6 +264,13 @@ form p select {
 
 .create-kit input[type='submit'] {
   height: 50vh;
+}
+
+.create-kit input:hover {
+  background-color: #ffc300;
+  background-color: #1C2654;
+  color: #fff;
+  border: 8px solid #fff;
 }
 
 
@@ -391,10 +396,37 @@ li.item {
 
 }
 
-
 header.cat-header {
   text-align: left;
+  color: #1C2654;
+  /*color: #fff;*/
 }
+
+.item:nth-child(even) header.cat-header {
+  color: #ffc300;
+}
+
+.item:nth-child(odd) {
+  background-color: #F7f7f7;
+}
+
+
+.selector .prev,
+.selector .next {
+  position: absolute;
+  top: 45%;
+}
+
+.selector .prev {
+  left: 0;
+}
+
+.selector .next {
+  right: 20%;
+  top: 50%;
+}
+
+
 
 
 

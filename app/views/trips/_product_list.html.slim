@@ -1,16 +1,16 @@
 - if @product
-  li.item.wrapper
-    header.cat-header.float-container
+  li.item
+    header.cat-header.wrapper.float-container
       .cat-name.small.S-1-2
         =@product.category.name
       .delete.S-1-2
         |&times;
 
-    ul
+    ul.wrapper
       li
         =image_tag src=@product.image
         h1.small.product-name
           =@product.name
-    = will_paginate instance_variable_get("@"+@product.category.name.gsub(" ","_").downcase), param_name: "trip_page",:page_links => false, previous_label: "PREVIOUS", next_label: "NEXT"
+    = will_paginate instance_variable_get("@"+@product.category.name.gsub(" ","_").downcase), param_name: "trip_page",:page_links => false, previous_label: "&lsaquo;", next_label: "&rsaquo;"
 
   

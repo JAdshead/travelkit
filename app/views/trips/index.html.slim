@@ -2,15 +2,14 @@
   h2 Your travel kit.
   h1.logo Sorted.
 
+
 ul.kit
-  - @categories.each do |c_l|
+  - @products_list.each do |category|
     li.item
       .cat-name.small
-        =c_l.name
+        =category[0]
       ul
-      - if c_l.products.last
-        = c_l.products.last.name
-
+        li=category[1].first.name
 
 .purchase.S-1-1.float-container'>
   .price.S-1-2.yellow-bg

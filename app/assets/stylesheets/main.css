@@ -168,7 +168,7 @@ body {
   line-height: 1.25em;
 }
 
-h2 {
+h1, h2 {
   color: #1C2654;
   margin: 0;
 }
@@ -239,27 +239,34 @@ form p select {
   height: 50vh;
 }
 
-.main-form p:nth-child(odd) {
+.main-form p:nth-child(even) {
 /*  border-left: 10px solid #ffc300;
   border-right: 10px solid #ffc300;*/
   background-color: #ffc300;
   color: white;
 }
 
-.main-form p:nth-child(odd) label {
+.main-form p:nth-child(even) label {
   color: #fff;
 }
 
-.main-form p:nth-child(odd) input {
+.main-form p:nth-child(even) select,
+.main-form p:nth-child(even) input {
   color: #ffc300;
-  border: 2px solid #ffc300;
 }
-
 
 #trip_duration {
   display: inline-block;
 }
 
+.create-kit {height: auto;
+  padding-bottom: 2em;
+  font-size: 2em;
+}
+
+.create-kit input[type='submit'] {
+  height: 50vh;
+}
 
 
 /* Navigation */
@@ -307,7 +314,7 @@ input[type="radio"] {
   color: #1C2654;
 }
 
-.main-form p:nth-child(odd) .radio-button {
+.main-form p:nth-child(even) .radio-button {
   color: #ffc300;
 }
 

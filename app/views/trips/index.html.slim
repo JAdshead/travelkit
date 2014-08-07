@@ -4,33 +4,13 @@
 
 
 ul.kit
-  - @products_list.each do |category|
-    - if category[1] == []
-      li.item
-        .cat-name.small
-          =category[0]
-        ul
-          li.small Sorry no products in this category
-    - if category[1] != []
-      li.item
-        header.cat-header.float-container.wrapper
-          .cat-name.small.S-1-2
-            =category[0]
-          .delete.S-1-2
-            |&times;
-        ul
-          li.wrapper
-            - if !category[1].first.image
-              =image_tag src="http://fillmurray.com/g/600/400"
-            - else 
-              =image_tag src=category[1].first.image
-              h1.product-name
-                =category[1].first.name
-        .selector
-          / .prev
-          /   | &lsaquo;
-          .next
-            | &rsaquo;
+
+
+  - @category_list.each do |category|
+    - @product = instance_variable_get(category)[0]
+    ==render "product_list"
+
+
 
 .purchase.S-1-1.float-container'>
   .price.S-1-2.yellow-bg

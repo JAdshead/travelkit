@@ -588,3 +588,10 @@ header.cat-header {
         page-break-after: avoid;
     }
 }
+
+
+button.buy a {
+  color: white;
+  text-decoration: none;
+  font-style: none;
+}

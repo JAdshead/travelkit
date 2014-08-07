@@ -11,4 +11,5 @@ TravelKit::Application.routes.draw do
 
   resources :categories
   resources :locations
+  resources :baskets
 end

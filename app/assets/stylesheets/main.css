@@ -347,6 +347,10 @@ input[type="radio"] {
   display: none;
 }
 
+.price {
+  padding-top: 10px;
+  text-align: center;
+}
 
 
 
@@ -358,11 +362,40 @@ ul.kit {
 
 li.item {
   height: 100vh;
+  text-align: center;
+  position: relative;
 }
 
 .cat-name {
 
 }
+
+.delete {
+  text-align: right;
+  cursor: pointer;
+  line-height: 40px;
+}
+
+.delete:hover {
+  color: red;
+}
+
+.item li {
+  margin-top: 1em;
+}
+
+.product-name {
+  font-size: 1em;
+  color: #666;
+  margin-top: 20px;
+
+}
+
+
+header.cat-header {
+  text-align: left;
+}
+
 
 
 

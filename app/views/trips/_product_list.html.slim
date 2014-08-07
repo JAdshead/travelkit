@@ -1,15 +1,21 @@
 - if @product
-  li.item
-    .cat-name.small
-      =@product.category.name
+  li.item.wrapper
+    header.cat-header.float-container
+      .cat-name.small.S-1-2
+        =@product.category.name
+      .delete.S-1-2
+      |&times;
+
     ul
       li
         =image_tag src=@product.image
-        =@product.name
+        h1.product-name
+          =@product.name
+    = will_paginate instance_variable_get("@"+@product.category.name.gsub(" ","_").downcase), param_name: "trip_page",:page_links => false, previous_label: "PREVIOUS", next_label: "NEXT"
 - else
-  li.item
+  li.item.wrapper
     .cat-name.small
       =@product.category.name
     ul
       li.small Sorry no products in this category
-= will_paginate instance_variable_get("@"+@product.category.name.gsub(" ","_").downcase), param_name: "trip_page",:page_links => false, previous_label: "PREVIOUS", next_label: "NEXT"
+  

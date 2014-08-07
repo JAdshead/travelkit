@@ -1,13 +1,14 @@
  class Product < ActiveRecord::Base
-  attr_accessible :name, :image, :gender
+  attr_accessible :name, :image, :gender, :price
   mount_uploader :image, ImageUploader
   
   belongs_to :category
   belongs_to :location
 
 
-  def self.get_kit(trip, categories)
-    destination = trip["destination"]
+  def self.get_kit(trip, categories, country_short)
+    destination = country_short
+
     @category_list = {}
     if trip.budget == 1
       order = "price DESC"

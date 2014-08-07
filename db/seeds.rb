@@ -9,8 +9,8 @@ Category.destroy_all
 Location.destroy_all
 Product.destroy_all
 
-france = Location.create(name: "France")
-england = Location.create(name: "England")
+france = Location.create(name: "FR")
+england = Location.create(name: "GB")
 
 c1 = Category.create(name: "Shampoo")
 p = Product.create(price: 2,name: "AXE Shampoo Apollo", gender: "Male")

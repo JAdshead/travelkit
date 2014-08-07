@@ -4,12 +4,12 @@
       .cat-name.small.S-1-2
         =@product.category.name
       .delete.S-1-2
-      |&times;
+        |&times;
 
     ul
       li
         =image_tag src=@product.image
-        h1.product-name
+        h1.small.product-name
           =@product.name
     = will_paginate instance_variable_get("@"+@product.category.name.gsub(" ","_").downcase), param_name: "trip_page",:page_links => false, previous_label: "PREVIOUS", next_label: "NEXT"
 

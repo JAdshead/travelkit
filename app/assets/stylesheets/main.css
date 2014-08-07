@@ -142,9 +142,9 @@ body {
   padding-top: 4em;
 }
 
-
-.intro .half {
-  height: 50%;
+.intro.short {
+  height: auto;
+  padding-bottom: 4em;
 }
 
 /* Grid */
@@ -185,7 +185,7 @@ h1, h2 {
   margin: 0;
 }
 
-.small {font-size: 0.5em;}
+.small {font-size: 0.5em !important;}
 
 /* UI basics */
 
@@ -220,6 +220,8 @@ input[type='number'] {
   font-size: 2em;
 }
 
+
+
 form p {
   /*height: 100vh;*/
   padding-top: 2em;
@@ -233,8 +235,6 @@ form p {
 form p select {
   color: #1C2654;
 }
-
-
 
 .main-form p {
   background: #1C2654;
@@ -280,6 +280,13 @@ form p select {
 
 .create-kit input[type='submit'] {
   height: 50vh;
+}
+
+.create-kit input:hover {
+  background-color: #ffc300;
+  background-color: #1C2654;
+  color: #fff;
+  border: 8px solid #fff;
 }
 
 
@@ -388,6 +395,7 @@ li.item {
   text-align: right;
   cursor: pointer;
   line-height: 40px;
+  display: block;
 }
 
 .delete:hover {
@@ -405,10 +413,37 @@ li.item {
 
 }
 
-
 header.cat-header {
   text-align: left;
+  color: #1C2654;
+  /*color: #fff;*/
 }
+
+.item:nth-child(even) header.cat-header {
+  color: #ffc300;
+}
+
+.item:nth-child(odd) {
+  background-color: #F7f7f7;
+}
+
+
+.selector .prev,
+.selector .next {
+  position: absolute;
+  top: 45%;
+}
+
+.selector .prev {
+  left: 0;
+}
+
+.selector .next {
+  right: 20%;
+  top: 50%;
+}
+
+
 
 
 

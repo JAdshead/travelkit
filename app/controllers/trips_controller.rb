@@ -12,14 +12,14 @@ class TripsController < ApplicationController
 
     @products_list = Product.get_kit(@trip, @categories, @country_short)
     @products_list.each do |name, value| 
-      page = params[:page] || 1
+      page = params[:page]
       per_page = 1
       instance_variable_set("@"+name.gsub(" ","_").downcase, value.paginate(page: page, per_page: per_page))
       @category_list << "@"+name.gsub(" ","_").downcase
     end
     respond_to do |format|
       format.html {render :index}
-      format.json { render json: @products_list }
+      format.json { render json: @category_list }
       format.js
     end
     # render :index  

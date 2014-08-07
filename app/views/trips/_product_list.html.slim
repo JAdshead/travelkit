@@ -12,10 +12,5 @@
         h1.small.product-name
           =@product.name
     = will_paginate instance_variable_get("@"+@product.category.name.gsub(" ","_").downcase), param_name: "trip_page",:page_links => false, previous_label: "PREVIOUS", next_label: "NEXT"
-- else
-  li.item.wrapper
-    .cat-name.small
-      =@product.category.name
-    ul
-      li.small Sorry no products in this category
+
   

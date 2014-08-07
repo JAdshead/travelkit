@@ -15,12 +15,6 @@
         span.radio-button
           =<> f.radio_button :gender, option
           = option
-    / p.wrapper
-    /   =<> f.label :group, "Together with"
-    /   = f.number_field :group
-    /   br
-    /   | other person(s)
-    /   a.next next
     p.wrapper
       =<> f.label :arrival, "Arriving the..."
       = date_select :trip, :arrive

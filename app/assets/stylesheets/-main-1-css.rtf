@@ -1,3 +1,5 @@
+
+
 /*! HTML5 Boilerplate v4.3.0 | MIT License | http://h5bp.com/ */
 
 /*
@@ -183,16 +185,9 @@ button.logo a {
 /* Typography */
 
 body {
-  font-size: 21px;
+  font-size: 36px;
   line-height: 1.25em;
 }
-
-@media (min-width: 600px) {
-body {
-  font-size: 36px;
-}
-}
-
 
 h1, h2 {
   color: #1C2654;
@@ -211,7 +206,7 @@ textarea {
     outline: 0;
     background-color: #fff;
     text-align: center;
-    height: 3em;
+    height: 2em;
     padding: 10px 20px;
     color: #ccc;
 }
@@ -224,27 +219,26 @@ input {
 input,
 #trip_duration  {
     width: 75%;
+    min-width: 300px;
+    max-width: 800px;
 }
 
 
 input[type='number'] {
   width: 50%;
   font-size: 2em;
-  padding-right: 0;
 }
 
 
 form p {
-  padding-top: 4em;
-  padding-bottom: 4em;
+  padding-top: 2em;
   text-align: center;
   color: #fff;
   position: relative;
 }
 
 .main-form p {
-    /*height: 100vh;*/
-    background: #fab700;
+    height: 100vh;
 }
 
 
@@ -252,20 +246,27 @@ form p select {
   color: #1C2654;
 }
 
-
+.main-form p {
+  background: #1C2654;
+}
 
 .main-form p label {
   display: block;
+/*  width: 100%;
+  text-align: center;*/
   padding-bottom: 2em;
   font-weight: bolder;
   color: white;
 }
 
-.main-form p:nth-child(even) {
-  background-color: #ffc300;
-   background-color: #faaa00;
-  
+.main-form p.half {
+  height: 50vh;
+}
 
+.main-form p:nth-child(even) {
+/*  border-left: 10px solid #ffc300;
+  border-right: 10px solid #ffc300;*/
+  background-color: #ffc300;
   color: white;
 }
 
@@ -275,7 +276,7 @@ form p select {
 
 .main-form p:nth-child(even) select,
 .main-form p:nth-child(even) input {
-  color: #ccc;
+  color: #ffc300;
 }
 
 #trip_duration {
@@ -285,20 +286,18 @@ form p select {
 .create-kit {
   height: auto;
   padding-bottom: 2em;
-  padding-top: 2em;
   font-size: 2em;
 }
 
 .create-kit input[type='submit'] {
-  background-color: #1C2654;
-  color: #fff;
-  border: 6px solid #fff;
+  height: 50vh;
 }
 
 .create-kit input:hover {
-  background-color: white;
-  color: #1C2654;
-
+  background-color: #ffc300;
+  background-color: #1C2654;
+  color: #fff;
+  border: 8px solid #fff;
 }
 
 
@@ -347,15 +346,11 @@ button.buy a {
   background: #ffc300;
   }
 
-
-
-/* Radio Buttons ------------------------*/
-
 input[type="radio"] {
     display:block;
     opacity: 1.0;
     width: auto;
-    margin: 0.5em auto;
+    margin: 0px auto;
     text-align: center;
     height: 1em;
 }
@@ -369,25 +364,17 @@ input[type="radio"] {
 }*/
 
 .radio-button {
-  width: 33%;
-  display: inline-block;
+  width: 75%;
+  display: block;
+  background-color: white;
+  margin: 20px auto;
   padding-bottom: 20px;
-  color: white;
-  float-left;
+  color: #1C2654;
 }
 
-@media (min-width: 600px) {
-  .radio-button {
-    margin: 20px auto;
-    padding-bottom: 20px;
-  }
-}
-
-
-
-/*.main-form p:nth-child(even) .radio-button {
+.main-form p:nth-child(even) .radio-button {
   color: #ffc300;
-}*/
+}
 
 
 
@@ -432,9 +419,9 @@ ul.kit {
 }
 
 li.item {
+  height: 100vh;
   text-align: center;
   position: relative;
-  padding-bottom: 4em;
 }
 
 .cat-name {
@@ -458,7 +445,7 @@ li.item {
 }
 
 .product-name {
-  font-size: 0.5em;
+  font-size: 1em;
   color: #666;
   margin-top: 20px;
 

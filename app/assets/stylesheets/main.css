@@ -366,9 +366,39 @@ input[type="radio"] {
   display: block;
   background-color: white;
   margin: 20px auto;
-  padding-bottom: 20px;
+  /*padding-bottom: 20px;*/
+  padding: 0.5em;
   color: #1C2654;
+  position: relative;
 }
+
+.radio-button input {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  -moz-opacity: 0; 
+  -ms-filter: alpha(opacity=0); 
+  -ms-filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0); 
+  filter: alpha(opacity=0); 
+  opacity: 0;  // modern gecko and webkit
+}
+
+.radio-button input[type="radio"]:checked + span{
+  font-weight: bold;
+}
+
+.radio-button:hover {
+  background-color: #f30002;
+}
+
+.radio-active {
+  background-color: blue;
+}
+
+
+
 
 .main-form p:nth-child(even) .radio-button {
   color: #ffc300;

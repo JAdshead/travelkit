@@ -13,8 +13,10 @@
       =<> f.label :gender, "I am "
       - ['Female', 'Male', 'Who cares?'].each do |option|
         span.radio-button
+
           =<> f.radio_button :gender, option
-          = option
+          span.raidio-button-text=option.humanize
+          
     p.wrapper
       =<> f.label :arrival, "Arriving the..."
       = date_select :trip, :arrive

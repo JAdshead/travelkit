@@ -5,9 +5,11 @@
 
 ul.kit
 
-
+  - @price = 0
   - @category_list.each do |category|
     - @product = instance_variable_get(category)[0]
+    - if @product
+      - @price += @product.price
     ==render "product_list"
 
 
@@ -15,7 +17,7 @@ ul.kit
 .purchase.S-1-1.float-container'>
   .price.S-1-2.yellow-bg
     span.small Total
-    | £23
+    = "£ #{@price}"
   
   button.buy.S-1-2.blue-bg'>
     =link_to "Get Kit", baskets_path

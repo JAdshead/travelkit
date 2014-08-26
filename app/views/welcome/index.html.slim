@@ -13,10 +13,8 @@
       =<> f.label :gender, "I am:"
       - ['Female', 'Male', 'Who cares?'].each do |option|
         span.radio-button
-
           =<> f.radio_button :gender, option
           span.radio-button-text=option.humanize
-          
     p.wrapper
       =<> f.label :arrival, "I am arriving on:"
       = date_select :trip, :arrive
@@ -33,7 +31,7 @@
       - ['Cheap', 'Luxury'].each_with_index do |option, i|
         span.radio-button
           =<> f.radio_button :budget, i
-          =option
+          span.radio-button-text=option.humanize
       a.next next
     p.wrapper.create-kit
       = f.submit "Create Kit"
